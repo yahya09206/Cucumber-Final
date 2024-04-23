@@ -47,4 +47,9 @@ public class WebOrderLoginStepDef {
     public void loginErrorMessageShouldBePresent() {
         loginPage.loginErrorMsgPresent();
     }
+
+    @When("user provides username {string} and password {string}")
+    public void userProvidesUsernameAndPassword(String username, String password) {
+        loginPage.login(username, password);
+    }
 }
