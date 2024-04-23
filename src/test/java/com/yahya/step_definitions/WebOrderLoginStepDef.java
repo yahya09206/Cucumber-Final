@@ -27,7 +27,7 @@ public class WebOrderLoginStepDef {
     public void we_should_see_all_order_page() {
 
         // check that we are at the all orders page
-        assertEquals("WebOrders", Driver.getDriver().getTitle());
+        assertEquals("Web Orders", Driver.getDriver().getTitle());
 
     }
 }
