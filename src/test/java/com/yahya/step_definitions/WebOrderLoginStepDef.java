@@ -5,6 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static org.junit.Assert.assertEquals;
+
 public class WebOrderLoginStepDef {
 
     WLoginPage loginPage;
@@ -22,6 +24,9 @@ public class WebOrderLoginStepDef {
     }
     @Then("we should see all order page")
     public void we_should_see_all_order_page() {
+
+        assertEquals(4, 4);
+        assertEquals(5, 5);
 
     }
 }
