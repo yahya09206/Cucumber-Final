@@ -1,6 +1,7 @@
 package com.yahya.step_definitions;
 
 import com.yahya.pages.WLoginPage;
+import com.yahya.utility.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -25,8 +26,8 @@ public class WebOrderLoginStepDef {
     @Then("we should see all order page")
     public void we_should_see_all_order_page() {
 
-        assertEquals(4, 4);
-        assertEquals(5, 5);
+        // check that we are at the all orders page
+        assertEquals("WebOrders", Driver.getDriver().getTitle());
 
     }
 }
