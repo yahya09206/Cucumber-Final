@@ -10,3 +10,9 @@ Feature: Getting jobs
     Given student is prepared
     When student uploads their resume
     Then student will be in the market
+
+  Scenario: student applies for the job
+    Given you are prepared for a job
+    And you are in the market
+    When you apply for 100 jobs a day
+    Then you will eventually get the job

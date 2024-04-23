@@ -31,4 +31,22 @@ public class JobStepDef {
     public void student_will_be_in_the_market() {
         System.out.println("Then student will be in the market");
     }
+
+
+    @Given("you are prepared for a job")
+    public void you_are_prepared_for_a_job() {
+        System.out.println("condition 1: you are prepared for a job");
+    }
+    @Given("you are in the market")
+    public void you_are_in_the_market() {
+        System.out.println("condition 2: you are in the market");
+    }
+    @When("you apply for {int} jobs a day")
+    public void you_apply_for_jobs_a_day(Integer int1) {
+        System.out.println("When applying for " + int1 + " jobs a day");
+    }
+    @Then("you will eventually get the job")
+    public void you_will_eventually_get_the_job() {
+        System.out.println("Then you should get the job");
+    }
 }
