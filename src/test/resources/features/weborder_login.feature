@@ -6,3 +6,9 @@ Feature: Weborder app login
     Given we are web order login page
     When we provide valid credentials
     Then we should see all order page
+
+  Scenario: User login fail
+    Given we are web order login page
+    When we provide invalid credentials
+    Then we should still be at the login page
+    And login error message should be present

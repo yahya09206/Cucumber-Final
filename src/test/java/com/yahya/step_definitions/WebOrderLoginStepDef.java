@@ -30,4 +30,8 @@ public class WebOrderLoginStepDef {
         assertEquals("Web Orders", Driver.getDriver().getTitle());
 
     }
+
+    @When("we provide invalid credentials")
+    public void weProvideInvalidCredentials() {
+    }
 }
