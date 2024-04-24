@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
@@ -61,5 +62,15 @@ public class WebOrderLoginStepDef {
 //        String passwordFromTable = credentialMap.get("password");
         System.out.println(credentialMap);
         loginPage.login(credentialMap.get("username"), credentialMap.get("password"));
+    }
+
+    @Given("this is the product reference")
+    public void thisIsTheProductReference(List<Map<String, Object>> productMapList) {
+
+        System.out.println("productMapList = " + productMapList);
+
+        for (Map<String, Object> stringObjectMap : productMapList) {
+            System.out.println("stringObjectMap = " + stringObjectMap);
+        }
     }
 }

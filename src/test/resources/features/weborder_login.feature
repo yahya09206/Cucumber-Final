@@ -32,3 +32,10 @@ Feature: Weborder app login
       | username | Tester |
       | password | test   |
     Then we should see all order page
+
+  Scenario: Representing table with header and more than 2 columns with a list of map
+    Given this is the product reference
+      | Product     | Price | Discount |
+      | MyMoney     | 100   | 0.08     |
+      | FamilyAlbum | 20    | 0.15     |
+      | ScreenSaver | 80    | 0.1      |
