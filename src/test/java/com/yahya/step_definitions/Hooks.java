@@ -14,7 +14,7 @@ public class Hooks {
      * or even when tags are used
      */
 
-    @Before
+    @Before("@ui")
     public void setupDriver(){
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
