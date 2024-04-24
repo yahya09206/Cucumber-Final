@@ -7,8 +7,7 @@ import io.cucumber.java.en.When;
 public class DataTableStepDefs {
 
 
-    // @Given("I have a {string}")
-    @Given("I have a {word}")
+    @Given("I have a {string}")
     public void i_have_a(String animal) {
         System.out.println("Given I have a " + animal);
     }

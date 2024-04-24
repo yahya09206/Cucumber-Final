@@ -5,9 +5,16 @@ Feature: Demonstrating the data table feature of cucumber
   few known data types supported by cucumber
 
   Scenario: Petting zoo
-    Given I have a horse
-    And I have a dog
-    And I have a turtle
-    And I have a zebra
+    Given I have a "horse"
+    And I have a "dog"
+    And I have a "turtle"
+    And I have a "zebra"
     When I call their names
     Then They come to me
+
+  Scenario: Petting zoo with table
+    Given I have the following animals
+      | horse  |
+      | dog    |
+      | turtle |
+      | zebra  |
