@@ -67,10 +67,15 @@ public class WebOrderLoginStepDef {
     @Given("this is the product reference")
     public void thisIsTheProductReference(List<Map<String, Object>> productMapList) {
 
-        System.out.println("productMapList = " + productMapList);
+//        System.out.println("productMapList = " + productMapList);
+//
+//        for (Map<String, Object> stringObjectMap : productMapList) {
+//            System.out.println("stringObjectMap = " + stringObjectMap);
+//        }
 
-        for (Map<String, Object> stringObjectMap : productMapList) {
-            System.out.println("stringObjectMap = " + stringObjectMap);
-        }
+        Map<String, Object> thirdRowMap = productMapList.get(2);
+        System.out.println("thirdRowMap = " + thirdRowMap);
+        // Print discount column of 3rd map
+        System.out.println("thirdRowMap.get(\"Discount\") = " + thirdRowMap.get("Discount"));
     }
 }
