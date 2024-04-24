@@ -1,4 +1,4 @@
-@ui
+@ui @wip
 Feature: Weborder app login
   As a user
   I should be able to login to the web order app
