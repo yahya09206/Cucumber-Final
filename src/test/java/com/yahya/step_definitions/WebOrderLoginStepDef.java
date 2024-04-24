@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.Map;
+
 import static org.junit.Assert.assertEquals;
 
 public class WebOrderLoginStepDef {
@@ -51,5 +53,13 @@ public class WebOrderLoginStepDef {
     @When("user provides username {string} and password {string}")
     public void userProvidesUsernameAndPassword(String username, String password) {
         loginPage.login(username, password);
+    }
+
+    @When("we provide below credentials")
+    public void weProvideBelowCredentials(Map<String, String> credentialMap) {
+//        String usernameFromTable = credentialMap.get("username");
+//        String passwordFromTable = credentialMap.get("password");
+        System.out.println(credentialMap);
+        loginPage.login(credentialMap.get("username"), credentialMap.get("password"));
     }
 }
