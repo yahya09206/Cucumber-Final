@@ -1,8 +1,11 @@
 package com.yahya.step_definitions;
 
+import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.util.List;
 
 public class DataTableStepDefs {
 
@@ -18,5 +21,12 @@ public class DataTableStepDefs {
     @Then("They come to me")
     public void they_come_to_me() {
         System.out.println("Then they come to me");
+    }
+
+    @Given("I have the following animals")
+    public void i_have_the_following_animals(List<String> animalList) {
+
+        System.out.println("animalList = " + animalList);
+
     }
 }

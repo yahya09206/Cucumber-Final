@@ -18,3 +18,5 @@ Feature: Demonstrating the data table feature of cucumber
       | dog    |
       | turtle |
       | zebra  |
+    When I call their names
+    Then They come to me
