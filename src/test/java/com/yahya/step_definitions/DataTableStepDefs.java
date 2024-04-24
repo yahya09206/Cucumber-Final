@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.List;
+import java.util.Map;
 
 public class DataTableStepDefs {
 
@@ -33,5 +34,10 @@ public class DataTableStepDefs {
     @When("I call their names with below names")
     public void iCallTheirNamesWithBelowNames(List<String> nameList) {
         System.out.println("nameList = " + nameList);
+    }
+
+    @Then("They come to me with below noise")
+    public void theyComeToMeWithBelowNoise(Map<String, String> animalNoise) {
+        System.out.println("animalNoise = " + animalNoise);
     }
 }
