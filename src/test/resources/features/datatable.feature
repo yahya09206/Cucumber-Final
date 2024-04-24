@@ -18,5 +18,13 @@ Feature: Demonstrating the data table feature of cucumber
       | dog    |
       | turtle |
       | zebra  |
-    When I call their names
+    When I call their names with below names
+      | Tyrian  |
+      | Samwell |
+      | Denarys |
+      | Tywin   |
     Then They come to me
+      | horse  | Neigh |
+      | dog    | Woof  |
+      | turtle | Hiss  |
+      | zebra  | Bro   |

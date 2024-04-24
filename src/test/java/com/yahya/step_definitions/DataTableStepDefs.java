@@ -29,4 +29,9 @@ public class DataTableStepDefs {
         System.out.println("animalList = " + animalList);
 
     }
+
+    @When("I call their names with below names")
+    public void iCallTheirNamesWithBelowNames(List<String> nameList) {
+        System.out.println("nameList = " + nameList);
+    }
 }
