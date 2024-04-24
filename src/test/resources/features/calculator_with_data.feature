@@ -5,7 +5,7 @@ Feature: Calculator Feature with data
   to use the calculator,
   so that I can do arithmetic operations
 
-  @wip
+  @wip2
     # Scenario Outline: is used to run some scenario against multiple different sets of data
     # the data is provided under Examples: section as a table and it's required
     # you can refer to the table data by using <columnName> in your steps
@@ -16,9 +16,10 @@ Feature: Calculator Feature with data
     Then I should get result <expectedResult> displayed
     Examples:
       | num1 | num2 | expectedResult |
-      | 3    | 4    | 7              |
+      | 3    | 4    | 12              |
       | 4    | 7    | 11             |
       | 6    | 11   | 17             |
+      | 5    | 11   | 18             |
 
 #  Scenario: Add 2 numbers example 1
 #    Given calculator app is open
