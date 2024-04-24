@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 public class WebOrderStepDefs {
     @When("we select {string} tab from sidebar")
     public void weSelectTabFromSidebar(String tabName) {
@@ -37,5 +39,7 @@ public class WebOrderStepDefs {
             System.out.println("eachOption.getText() = " + eachOption.getText());
             actualOptions.add(eachOption.getText());
         }
+        // assert that these two lists are equal
+        assertEquals(expectedOption, actualOptions);
     }
 }
