@@ -19,7 +19,8 @@ public class Hooks {
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @After
+
+    @After("@ui")
     public void tearDown(){
         Driver.closeBrowser();
     }
