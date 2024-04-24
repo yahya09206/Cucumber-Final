@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
         glue = "com/yahya/step_definitions",
+        plugin = {"html:"},
         dryRun = false,
         tags = "@wip"
         )
