@@ -24,8 +24,8 @@ public class LibLoginPage {
     }
 
     public void login(String username, String password){
-        usernameBox.sendKeys(ConfigReader.read(username));
-        passwordBox.sendKeys(ConfigReader.read(password));
+        usernameBox.sendKeys(username);
+        passwordBox.sendKeys(password);
         loginButton.click();
     }
 }

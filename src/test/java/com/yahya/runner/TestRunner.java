@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         ,glue = "com/yahya/step_definitions",
         plugin = {"pretty", "html:target/cucumber_report.html"},
         dryRun = false,
-        tags = "@wip2"
+        tags = "@Library-Login"
         )
 public class TestRunner {
 }
