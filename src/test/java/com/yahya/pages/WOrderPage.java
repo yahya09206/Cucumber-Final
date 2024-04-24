@@ -4,6 +4,12 @@ import com.yahya.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class WOrderPage {
 
@@ -45,6 +51,23 @@ public class WOrderPage {
     public WOrderPage(){
         PageFactory.initElements(Driver.getDriver(), this
         );
+    }
+
+    public List<String> getAllProductOptionsFromList(){
+
+        Select prodObj = new Select(productDropdown);
+
+        // getOptions method from select class is used
+        // to return all dropdown options as List of WebElements
+        List<WebElement> allProductOptions = prodObj.getOptions();
+        // this is the list to store actual options, so we can compare with expected
+        List<String> actualOptions = new ArrayList<>();
+
+        for (WebElement eachOption : allProductOptions) {
+            System.out.println("eachOption.getText() = " + eachOption.getText());
+            actualOptions.add(eachOption.getText());
+        }
+        return actualOptions;
     }
 
 }

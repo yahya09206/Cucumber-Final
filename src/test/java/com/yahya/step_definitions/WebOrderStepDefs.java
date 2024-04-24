@@ -24,21 +24,12 @@ public class WebOrderStepDefs {
     @Then("we should see below options in Product dropdown list")
     public void weShouldSeeBelowOptionsInProductDropdownList(List<String> expectedOption) {
 
+        System.out.println("expectedOption = " + expectedOption);
         WOrderPage orderPage = new WOrderPage();
 
-        WebElement dropdown = orderPage.productDropdown;
-        Select prodObj = new Select(dropdown);
-
-        // getOptions method from select class is used
-        // to return all dropdown options as List of WebElements
-        List<WebElement> allProductOptions = prodObj.getOptions();
         // this is the list to store actual options, so we can compare with expected
         List<String> actualOptions = new ArrayList<>();
 
-        for (WebElement eachOption : allProductOptions) {
-            System.out.println("eachOption.getText() = " + eachOption.getText());
-            actualOptions.add(eachOption.getText());
-        }
         // assert that these two lists are equal
         assertEquals(expectedOption, actualOptions);
     }
