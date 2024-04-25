@@ -18,8 +18,9 @@ Feature: Weborder app login
     Then we should still be at the login page
     And login error message should be present
 
+  @failed
   Scenario: User login with specific credentials
-    When user provides username "Tester" and password "test"
+    When user provides username "Tester" and password "test11111111"
     Then we should see all order page
 
   Scenario: User login with invalid credentials

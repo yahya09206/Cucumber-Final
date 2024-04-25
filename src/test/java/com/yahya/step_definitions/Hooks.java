@@ -3,6 +3,9 @@ package com.yahya.step_definitions;
 import com.yahya.utility.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +24,16 @@ public class Hooks {
 
 
     @After("@ui")
-    public void tearDown(){
+    public void tearDown(Scenario scenario){
+
+        // Check if the scenario failed or not
+        if (scenario.isFailed()){
+            // this is how we take screenshots in selenium
+            TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
+            byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
+
+            scenario.attach(screenshot, "image/png", "Failed scenario");
+        }
         Driver.closeBrowser();
     }
 }
