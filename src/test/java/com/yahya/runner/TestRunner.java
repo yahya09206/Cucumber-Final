@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber_report.html",
                   "rerun:target/rerun.txt"},
         dryRun = false,
-        tags = ""
+        tags = "@failed"
 )
 public class TestRunner {
 }

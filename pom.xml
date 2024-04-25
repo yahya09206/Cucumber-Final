@@ -59,14 +59,6 @@
             <version>1.0.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
-        <!-- https://mvnrepository.com/artifact/me.jvt.cucumber/reporting-plugin -->
-        <dependency>
-            <groupId>me.jvt.cucumber</groupId>
-            <artifactId>reporting-plugin</artifactId>
-            <version>5.3.0</version>
-        </dependency>
 
     </dependencies>
-
 </project>
